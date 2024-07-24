@@ -1,8 +1,8 @@
 
 ## SIPEBI
 
-Sebuah Project Desa yang di kerjakan 3 orang yang tidak bisa ngoding tapi nekat buat project desa, memang gila semua beliau ini
+Project Desa Sungai Ambangah
 
-- Maulana Aditya Pratama(Pengkoding Hamdal).
-- Listia Priwida(Kang Buat Laporan).
-- Desyka Shalu(sama kek beliau listia).
+- Maulana Aditya Pratama(12210778)
+- Listia Priwida(12210744)
+- Desyka Shalu Putri Velijha(12210753)
