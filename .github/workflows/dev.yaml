@@ -27,7 +27,7 @@ jobs:
 
       - name: Buat image api siproject/sipebi
         run: |
-          docker build -t siproject/sipebi
+          docker build -t siproject/sipebi .
 
       - name: Jalankan service app
         run: |
