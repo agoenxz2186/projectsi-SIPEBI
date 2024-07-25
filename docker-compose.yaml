@@ -19,6 +19,6 @@ services:
     volumes:
       - /home/bsi/projects1/storage/sipebi/storage:/var/www/storage/app
     networks:
-      gorujuknet:
-        ipv4_address: 192.168.201.16
+      serverbsi:
+        ipv4_address: 192.168.195.16
  
