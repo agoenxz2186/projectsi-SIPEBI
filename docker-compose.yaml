@@ -14,7 +14,7 @@ services:
     image: siproject/sipebi
     environment:
       TZ: Asia/Jakarta
-      APP_DEBUG: "false"
+      APP_DEBUG: "true"
     
     volumes:
       - /home/bsi/projects1/storage/sipebi/storage:/var/www/storage/app
