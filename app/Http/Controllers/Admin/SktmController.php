@@ -196,7 +196,7 @@ class SktmController extends Controller
     
         // Menyimpan atau mengirim PDF ke browser
         $output= $dompdf->output();
-        return response( $output, [
+        return response( $output, 200, [
             "Content-Type" => "application/pdf",
             "Content-Disposition" => 'attachment; filename="surat_keterangan_tidak_mampu.pdf"'
         ] );
