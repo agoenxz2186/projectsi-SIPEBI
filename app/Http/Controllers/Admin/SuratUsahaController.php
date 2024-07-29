@@ -205,6 +205,11 @@ class SuratUsahaController extends Controller
     $dompdf->render();
 
     // Menyimpan atau mengirim PDF ke browser
+    $output = $dompdf->output();
+    return response($output, 200, [
+        "Content-type" => "application/pdf",
+        "Content-Disposition" => 'inline; filename="surat_usaha.pdf"'
+    ]);
     return $dompdf->stream("Surat_Usaha.pdf");
 }
 }
