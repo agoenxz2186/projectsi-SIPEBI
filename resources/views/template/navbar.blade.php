@@ -23,6 +23,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li><a <?php if ($current_page == 'galeri') echo 'class="active"'; ?> href="{{ route('galeri') }}">Galeri Desa</a></li>
           </ul>
         </li>
+        <li class="dropdown"><a href="#"><span>Layanan Online</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a <?php if ($current_page == 'sktm') echo 'class="active"'; ?> href="{{ route('index.sktm') }}">Pembuatan SKTM</a></li>
+            <li><a <?php if ($current_page == 'suratusaha') echo 'class="active"'; ?> href="{{ route('index.suratusaha') }}">Pembuatan SU</a></li>
+          </ul>
+        </li>
         <li class="dropdown"><a href="#"><span>Pemerintahan Desa</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a <?php if ($current_page == 'struktur') echo 'class="active"'; ?> href="{{ route('struktur') }}">Struktur Organisasi</a></li>

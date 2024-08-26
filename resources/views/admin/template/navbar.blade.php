@@ -71,6 +71,41 @@
               </div>
             </li>
             <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#sample" aria-expanded="false" aria-controls="sample">
+                <img src="{{ asset('assets/admin/images/icons/010-office-material.png')}}" alt="">
+                <span class="menu-title">Profil Desa<i class="fa fa-sort-down"></i></span>
+              </a>
+              <div class="collapse" id="sample">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('tentang.index') }}">
+                      Tentang Kami
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('visimisi.index') }}">
+                     Visi Misi
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('sejarah.index') }}">
+                     Sejarah
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('geografis.index') }}">
+                     Geografis
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('struktur_foto.index') }}">
+                     Struktur Foto
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('struktur.index') }}">
                 <img src="{{ asset('assets/admin/images/icons/005-forms.png')}}" alt="">
                 <span class="menu-title">Struktur Organisasi</span>

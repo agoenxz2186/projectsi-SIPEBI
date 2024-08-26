@@ -26,6 +26,25 @@
 
           </div>
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profil Desa</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('tentang_kami') }}">Tentang Kami</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('visi_misi') }}">Visi Misi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('sejarah') }}">Sejarah Desa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('geografis') }}">Geografis</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('galeri') }}">Galeri Desa</a></li>
+            </ul>
+          </div>
+       
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Informasi Publik </h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('index.berita') }}">Berita Desa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('agenda') }}">Agenda Kegiatan</a></li>
+            </ul>
+          </div>
+
          
 
         </div>

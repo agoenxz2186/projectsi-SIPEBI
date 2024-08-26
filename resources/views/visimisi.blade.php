@@ -25,18 +25,17 @@
               <div class="col-lg-6 pt-4 pt-lg-0 text-center">
                 <h3>Visi</h3>
                 <p>
-                  "Terwujudnya Desa Sungai Ambangah sebagai Desa yang mandiri, Berkepribadian, berbudaya, sehat, cerdas, sejahtera, dan toleran."
+                  {{ $firstVisi->visi }}
                 </p>
                 <p>
                   Visi ini mencakup:
                   <ul style="list-style-type: square;">
-                    <li>Desa yang mandiri: mewujudkan kehidupan sejajar dengan masyarakat desa lain dengan keunggulan lokal.</li>
-                    <li>Berkepribadian: orientasi pada proses pembangunan kehidupan bermasyarakat.</li>
-                    <li>Berbudaya: menjunjung norma dan adat istiadat.</li>
-                    <li>Masyarakat sehat: jiwa dan raga yang kuat.</li>
-                    <li>Masyarakat cerdas: menguasai IPTEK dan memanfaatkannya secara tepat.</li>
-                    <li>Masyarakat sejahtera: ketercukupan kebutuhan lahir dan batin.</li>
-                    <li>Toleran: menghindari diskriminasi dan perselisihan yang merugikan.</li>
+                    @foreach ($remainingVisiMisi as $vm)
+                    @if (!empty($vm->visi))
+                      <li> {{ $vm->visi }}</li>
+                      @endif
+                    @endforeach
+                    
                   </ul>
                 </p>
 
@@ -44,13 +43,12 @@
                 <p>
                   Misi kami adalah:
                   <ol>
-                    <li>Meningkatkan tata kelola pemerintahan yang baik berdasarkan demokratisasi, transparansi, dan kesetaraan gender.</li>
-                    <li>Meningkatkan pembangunan dan pemeliharaan sarana prasarana desa berbasis kemampuan lokal.</li>
-                    <li>Meningkatkan kualitas dan akses pelayanan sosial dasar.</li>
-                    <li>Meningkatkan pembangunan sarana prasarana usaha ekonomi desa.</li>
-                    <li>Meningkatkan pembangunan sarana prasarana lingkungan hidup desa menuju masyarakat yang tanggap bencana.</li>
-                    <li>Meningkatkan kualitas dan peran kelembagaan desa berbasis partisipasi masyarakat.</li>
-                  </ol>
+                    @foreach ($remainingVisiMisi as $vm)
+                    @if (!empty($vm->misi)) <!-- Cek apakah misi tidak kosong -->
+                      <li>{{ $vm->misi }}</li>
+                    @endif
+                  @endforeach
+                                </ol>
                 </p>
               </div>
             </div>

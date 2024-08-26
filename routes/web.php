@@ -22,9 +22,14 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\Admin\StrukturOrganisasiController;
 use App\Http\Controllers\Admin\AgendaAdminController;
 use App\Http\Controllers\Admin\GaleriAdminController;
+use App\Http\Controllers\admin\GeografisAdminController;
+use App\Http\Controllers\admin\SejarahAdminController;
+use App\Http\Controllers\admin\StrukturFotoController;
 use App\Http\Controllers\Admin\UserAdminController;
 use App\Http\Controllers\GlobalSearchController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\admin\TentangController;
+use App\Http\Controllers\admin\VisiMisiAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -129,6 +134,56 @@ Route::prefix('admin/struktur')->middleware('admin')->group(function () {
     Route::delete('/{struktur}', [StrukturOrganisasiController::class, 'destroy'])->name('struktur.destroy');
 });
 
+// tentang kami admin
+Route::prefix('admin/tentang_kami')->middleware('admin')->group(function () {
+    Route::get('/', [TentangController::class, 'index'])->name('tentang.index');
+    Route::get('/create', [TentangController::class, 'create'])->name('tentang.create');
+    Route::post('/', [TentangController::class, 'store'])->name('tentang.store');
+    Route::get('/{tentang}/edit', [TentangController::class, 'edit'])->name('tentang.edit');
+    Route::put('/{tentang}', [TentangController::class, 'update'])->name('tentang.update');
+    Route::delete('/{tentang}', [TentangController::class, 'destroy'])->name('tentang.destroy');
+});
+
+// visi misi admin
+Route::prefix('admin/visimisi')->middleware('admin')->group(function () {
+    Route::get('/', [VisiMisiAdminController::class, 'index'])->name('visimisi.index');
+    Route::get('/create', [VisiMisiAdminController::class, 'create'])->name('visimisi.create');
+    Route::post('/', [VisiMisiAdminController::class, 'store'])->name('visimisi.store');
+    Route::get('/{visimisi}/edit', [VisiMisiAdminController::class, 'edit'])->name('visimisi.edit');
+    Route::put('/{visimisi}', [VisiMisiAdminController::class, 'update'])->name('visimisi.update');
+    Route::delete('/{visimisi}', [VisiMisiAdminController::class, 'destroy'])->name('visimisi.destroy');
+});
+
+// geografis admin
+Route::prefix('admin/geografis')->middleware('admin')->group(function () {
+    Route::get('/', [GeografisAdminController::class, 'index'])->name('geografis.index');
+    Route::get('/create', [GeografisAdminController::class, 'create'])->name('geografis.create');
+    Route::post('/', [GeografisAdminController::class, 'store'])->name('geografis.store');
+    Route::get('/{geografis}/edit', [GeografisAdminController::class, 'edit'])->name('geografis.edit');
+    Route::put('/{geografis}', [GeografisAdminController::class, 'update'])->name('geografis.update');
+    Route::delete('/{geografis}', [GeografisAdminController::class, 'destroy'])->name('geografis.destroy');
+});
+
+// foto struktur admin
+Route::prefix('admin/struktur_foto')->middleware('admin')->group(function () {
+    Route::get('/', [StrukturFotoController::class, 'index'])->name('struktur_foto.index');
+    Route::get('/create', [StrukturFotoController::class, 'create'])->name('struktur_foto.create');
+    Route::post('/', [StrukturFotoController::class, 'store'])->name('struktur_foto.store');
+    Route::get('/{struktur_foto}/edit', [StrukturFotoController::class, 'edit'])->name('struktur_foto.edit');
+    Route::put('/{struktur_foto}', [StrukturFotoController::class, 'update'])->name('struktur_foto.update');
+    Route::delete('/{struktur_foto}', [StrukturFotoController::class, 'destroy'])->name('struktur_foto.destroy');
+});
+
+
+// sejarah admin
+Route::prefix('admin/sejarah')->middleware('admin')->group(function () {
+    Route::get('/', [SejarahAdminController::class, 'index'])->name('sejarah.index');
+    Route::get('/create', [SejarahAdminController::class, 'create'])->name('sejarah.create');
+    Route::post('/', [SejarahAdminController::class, 'store'])->name('sejarah.store');
+    Route::get('/{sejarah}/edit', [SejarahAdminController::class, 'edit'])->name('sejarah.edit');
+    Route::put('/{sejarah}', [SejarahAdminController::class, 'update'])->name('sejarah.update');
+    Route::delete('/{sejarah}', [SejarahAdminController::class, 'destroy'])->name('sejarah.destroy');
+});
 // agenda admin
 Route::prefix('admin/agenda')->middleware('admin')->group(function () {
     Route::get('/', [AgendaAdminController::class, 'index'])->name('agenda.index');
@@ -155,6 +210,7 @@ Route::prefix('admin/user')->middleware('admin')->group(function () {
     Route::get('/{user}/edit', [UserAdminController::class, 'edit'])->name('user.edit');
     Route::put('/{user}', [UserAdminController::class, 'update'])->name('user.update');
     Route::delete('/{user}', [UserAdminController::class, 'destroy'])->name('user.destroy');
+    Route::post('/{user}/approve', [UserAdminController::class, 'approve'])->name('user.approve');
 });
 
 // global search

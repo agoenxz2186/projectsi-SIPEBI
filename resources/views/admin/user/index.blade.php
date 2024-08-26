@@ -59,6 +59,16 @@
                                                                 @method('DELETE')
                                                             </form>
                                                         </td>
+                                                        <td>
+                                                            @if($item->status == 'pending')
+                                                                <form action="{{ route('user.approve', $item->id) }}" method="POST">
+                                                                    @csrf
+                                                                    <button type="submit" class="btn btn-sm btn-success">Accept</button>
+                                                                </form>
+                                                            @else
+                                                                <span class="badge bg-success">Sudah Di Acc</span>
+                                                            @endif
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
