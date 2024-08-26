@@ -34,50 +34,22 @@
 
         <div class="row mt-3">
           <div class="col-lg-12">
-            <h3>Informasi Geografis Desa</h3>
-            <p>
-              Desa Sungai Ambangah merupakan Desa yang berada di wilayah Kecamatan Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat. Desa ini terdiri dari 5 (lima) Dusun, yaitu:
-            </p>
-           <p class="sejajar">
-            Dusun Mekar Sari 	: <span>2 RW dan 7 RT </span><br>
-            Dusun Kampung Baru 	: <span>1 RW dan 5 RT</span> <br>
-            Dusun Karya Sari  	: <span>2 RW dan 9 RT </span> <br>
-            Dusun Karya Desa 	: <span>2 RW dan 8 RT</span> <br>
-            Dusun Kumpai 	    : <span>1 RW dan 5 RT</span> <br>
-           </p>
-            <p class="sejajar">
-              Jumlah Aparatur Desa: <span>11 orang</span><br>
-              Kepala Desa: <span>1 orang</span><br>
-              Perangkat Desa: <span>5 orang</span><br>
-              Kepala Dusun: <span>5 orang</span><br>
-              RW: <span>8 orang</span><br>
-              RT: <span>34 orang</span><br>
-              BPD: <span>11 orang</span><br>
-              LPMD: <span>5 orang</span><br>
-              Luas Wilayah: <span>16.560 Ha</span><br>
-              Batas Desa:<br>
-              - Sebelah Timur Berbatasan dengan Desa Tebang Kacang<br>
-              - Sebelah Selatan Berbatasan dengan Desa Kuala Dua<br>
-              - Sebelah Barat Berbatasan dengan Desa Arang Limbung<br>
-              - Sebelah Utara Berbatasan dengan Desa Madu Sari<br>
-              Jumlah Penduduk: <span>5.541</span><br>
-              Jumlah KK: <span>1.591</span><br>
-              Jumlah Gedung Sekolah: <span>12 buah</span><br>
-              - PAUD: <span>3 buah</span><br>
-              - SD: <span>5 buah</span><br>
-              - SMP: <span>2 buah</span><br>
-              - SMA: <span>2 buah</span><br>
-              Jumlah Sarana Kesehatan:<br>
-              - PUSTU: <span>1 buah</span><br>
-              - POSKESDES: <span>1 buah</span><br>
-              Jumlah Sarana Ibadah:<br>
-              - MASJID: <span>11 buah</span><br>
-              - SURAU: <span>5 buah</span><br>
-              - GEREJA: <span>1 buah</span><br>
-              - KLENTENG/VIHARA: <span>1 buah</span>
-            </p>
+              <h3>Informasi Geografis Desa</h3>
+              <p>{{ $firstGeografis->keterangan }}</p>
+              <div class="sejajar">
+                  <table>
+                      @foreach ($remainingGeografis as $g)
+                          <tr>
+                              <td>{{ $g->nama }}:</td>
+                              <td style="width: 350px;"></td> <!-- Empty cell for spacing -->
+                              <td>{{ $g->jumlah }}</td>
+                          </tr>
+                      @endforeach
+                  </table>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
       </div>
     </section><!-- End About Section -->

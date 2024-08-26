@@ -24,16 +24,17 @@ class UserSeeder extends Seeder
                 'foto' => 'foto',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'status' => 'approve',
             ],
-            [
-                'name' => 'User Biasa',
-                'email' => 'user@example.com',
-                'password' => Hash::make('password'),
-                'role' => 'warga',
-                'foto' => 'foto',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            // [
+            //     'name' => 'User Biasa',
+            //     'email' => 'user@example.com',
+            //     'password' => Hash::make('password'),
+            //     'role' => 'warga',
+            //     'foto' => 'foto',
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
            
             // Tambahkan data pengguna lainnya sesuai kebutuhan
         ];

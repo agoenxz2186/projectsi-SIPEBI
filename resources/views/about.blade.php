@@ -24,10 +24,10 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/tentang.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('storage/tentang/' . $tentang->foto) }}" class="img-fluid" alt="Foto">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3 class="fst-italic">Website desa merupakan serana digital dimana masyarakat bisa melihat kegiatan yang dilakukan oleh desa sebagai wujud transparansi.</h3>
+            <h3 class="fst-italic">{{$tentang->deskripsi}}</h3>
            
           
           </div>

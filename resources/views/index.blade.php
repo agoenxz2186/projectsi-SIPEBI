@@ -1,6 +1,18 @@
 @extends('template.main')
 
 @section('content')
+@if (session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Akun Belum Disetujui',
+                html: "{{ session('error') }}<br><br><a href='https://wa.me/6285822067584' target='_blank' class='btn btn-success'>Hubungi Admin via WhatsApp</a>",
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
+@endif
 
 <section id="hero" class="d-flex justify-cntent-center align-items-center">
   <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">

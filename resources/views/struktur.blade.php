@@ -22,7 +22,7 @@
     <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
         <div class="d-flex justify-content-center" >
-        <img src="{{ asset('assets/img/struktur.png') }}"  alt="foto"  >
+        <img src="{{ asset('storage/struktur_foto/' . $struktur_foto->struktur_foto) }}"  alt="foto"  >
       </div>
         <div class="row">
           @foreach ($struktur as $item)

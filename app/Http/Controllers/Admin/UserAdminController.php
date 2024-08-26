@@ -12,8 +12,16 @@ class UserAdminController extends Controller
     public function index()
     {
         $user = User::paginate(5);
-        return view('admin.user.index', compact('user'));
+        $users = User::where('status', 'pending')->get();
+        return view('admin.user.index', compact('user','users'));
     }
+    public function approve(User $user)
+{
+    $user->status = 'approved';
+    $user->save();
+
+    return redirect()->route('user.index')->with('success', 'User approved successfully.');
+}
 
     public function edit(User $user)
     {
