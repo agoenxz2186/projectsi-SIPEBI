@@ -1,4 +1,5 @@
 FROM agoenxz21/php817swoole5nodejs
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 WORKDIR /var/www
 COPY --chown=www-data:www-data ./ /var/www
