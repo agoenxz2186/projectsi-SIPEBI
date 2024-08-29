@@ -71,12 +71,15 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="kewarganegaraan">Kewarganegaraan</label>
-                                        <input type="text" class="form-control" id="kewarganegaraan" name="kewarganegaraan" placeholder="Masukkan Kewarganegaraan" required>
+                                        <select name="kewarganegaraan" id="kewarganegaraan" class="form-control">
+                                            <option value="" disabled selected>Pilih Kewarganegaraan</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="agama">Agama</label>
                                         <select name="agama" id="agama" class="form-control" required>
-                                            <option value="">Pilih Agama</option>
+                                            <option value="" disabled selected>Pilih Agama</option>
                                             <option value="Islam">Islam</option>
                                             <option value="Khatolik">Khatolik</option>
                                             <option value="Protestan">Protestan</option>

@@ -42,7 +42,7 @@
             text-align: left;
         }
         .signature {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: right;
         }
         h2, h3, h4, p {
@@ -176,8 +176,7 @@
         </div>
         <div class="signature">
             <p>Dikeluarkan di : <b>Sungai Ambangah</b></p>
-            <p>Pada tanggal : <?php echo date("d-m-Y"); ?></p>
-            <br><br><br>
+            <p>Pada tanggal : <?php echo date("d-m-Y"); ?></p> <br>
             <p>KEPALA DESA SUNGAI AMBANGAH</p>
             <br>
             <div class="signature-name">SAMSURI</div>
