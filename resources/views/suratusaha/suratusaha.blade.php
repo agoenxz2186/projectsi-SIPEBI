@@ -71,8 +71,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="kewarganegaraan">Kewarganegaraan</label>
-                                        <input type="text" name="kewarganegaraan" id="kewarganegaraan" class="form-control" placeholder="Kewarganegaraan">
+                                        <select name="kewarganegaraan" id="kewarganegaraan" class="form-control">
+                                            <option value="" disabled selected>Pilih Kewarganegaraan</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                        </select>
                                     </div>
+                                    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
