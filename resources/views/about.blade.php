@@ -24,10 +24,10 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="{{ asset('storage/tentang/' . $tentang->foto) }}" class="img-fluid" alt="Foto">
+            <img src="{{ asset('storage/tentang/' . ($tentang->foto ?? 'gambar_default.jpg')) }}" class="img-fluid" alt="Foto">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3 class="fst-italic">{{$tentang->deskripsi}}</h3>
+            <h3 class="fst-italic">{{$tentang->deskripsi ?? 'gg'}}</h3>
            
           
           </div>

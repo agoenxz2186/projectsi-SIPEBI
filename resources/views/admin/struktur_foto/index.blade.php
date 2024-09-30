@@ -2,8 +2,8 @@
 @section('main')
 
 <div class="content-wrapper">
-      <h3 class="page-heading mb-7">Struktur Foto</h3>
-      <a href="{{ route('struktur_foto.create') }}" class="btn btn-primary mb-3">Tambah Struktur Foto</a>
+      <h3 class="page-heading mb-7">Foto Struktur</h3>
+      <a href="{{ route('struktur_foto.create') }}" class="btn btn-primary mb-3">Tambah Foto Struktur</a>
       @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}

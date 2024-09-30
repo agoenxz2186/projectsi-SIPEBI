@@ -99,7 +99,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ route('struktur_foto.index') }}">
-                     Struktur Foto
+                    Foto Struktur
                     </a>
                   </li>
                 </ul>

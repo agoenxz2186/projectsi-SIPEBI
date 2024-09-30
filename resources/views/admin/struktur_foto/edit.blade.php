@@ -1,12 +1,12 @@
 @extends('admin.template.main')
 @section('main')
 <div class="content-wrapper">
-    <h3 class="page-heading mb-4">Struktur Foto</h3>
+    <h3 class="page-heading mb-4">Foto Struktur</h3>
     <div class="row mb-2">
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title mb-4">Edit Struktur Foto</h5>
+              <h5 class="card-title mb-4">Edit Foto Struktur</h5>
               @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

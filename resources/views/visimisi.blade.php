@@ -25,7 +25,7 @@
               <div class="col-lg-6 pt-4 pt-lg-0 text-center">
                 <h3>Visi</h3>
                 <p>
-                  {{ $firstVisi->visi }}
+                  {{ $firstVisi->visi ?? "Visi tidak ditemukan" }}
                 </p>
                 <p>
                   Visi ini mencakup:
@@ -45,7 +45,7 @@
                   <ol>
                     @foreach ($remainingVisiMisi as $vm)
                     @if (!empty($vm->misi)) <!-- Cek apakah misi tidak kosong -->
-                      <li>{{ $vm->misi }}</li>
+                      <li>{{ $vm->misi ?? "Misi tidak ditemukan" }}</li>
                     @endif
                   @endforeach
                                 </ol>
