@@ -24,10 +24,10 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="{{ asset('storage/sejarah/' . $sejarah->foto) }}" class="img-fluid" alt="Foto">
+            <img src="{{ asset('storage/sejarah/' . ($sejarah->foto ?? 'gambar_default.jpg')) }}" class="img-fluid" alt="Foto">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p class="fst-italic">{{ $sejarah->deskripsi }}</p>          
+            <p class="fst-italic">{{ $sejarah->deskripsi ?? 'sejarah' }}</p>          
           </div>
         </div>
 

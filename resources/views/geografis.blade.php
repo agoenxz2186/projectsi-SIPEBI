@@ -35,7 +35,7 @@
         <div class="row mt-3">
           <div class="col-lg-12">
               <h3>Informasi Geografis Desa</h3>
-              <p>{{ $firstGeografis->keterangan }}</p>
+              <p>{{ $firstGeografis->keterangan ?? 'geografis' }}</p>
               <div class="sejajar">
                   <table>
                       @foreach ($remainingGeografis as $g)
