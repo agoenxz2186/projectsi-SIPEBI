@@ -22,6 +22,11 @@ class DatabaseSeeder extends Seeder
             AgendaSeeder::class,
             StrukturOrganisasiSeeder::class,
             GaleriSeeder::class,
+            GeografisSeeder::class,
+            SejarahSeeder::class,
+            StrukturFotoSeeder::class,
+            VisiMisiSeeder::class,
+            TentangSeeder::class,
         ]);
     }
 }
