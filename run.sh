@@ -1,7 +1,7 @@
 #!/bin/sh
 cd /var/www
 php artisan migrate:refresh
-php artisan db:seed
+php artisan db:seed DatabaseSeeder
 php artisan storage:link
 chmod -R 775 /var/www/storage
 chmod -R 775 /var/www/public/storage
