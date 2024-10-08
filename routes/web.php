@@ -22,14 +22,14 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\Admin\StrukturOrganisasiController;
 use App\Http\Controllers\Admin\AgendaAdminController;
 use App\Http\Controllers\Admin\GaleriAdminController;
-use App\Http\Controllers\admin\GeografisAdminController;
-use App\Http\Controllers\admin\SejarahAdminController;
-use App\Http\Controllers\admin\StrukturFotoController;
+use App\Http\Controllers\Admin\GeografisAdminController;
+use App\Http\Controllers\Admin\SejarahAdminController;
+use App\Http\Controllers\Admin\StrukturFotoController;
 use App\Http\Controllers\Admin\UserAdminController;
 use App\Http\Controllers\GlobalSearchController;
 use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\admin\TentangController;
-use App\Http\Controllers\admin\VisiMisiAdminController;
+use App\Http\Controllers\Admin\TentangController;
+use App\Http\Controllers\Admin\VisiMisiAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
